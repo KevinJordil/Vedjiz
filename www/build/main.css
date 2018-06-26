@@ -25691,6 +25691,10 @@ ion-navbar.toolbar {
   text-align: center;
 }
 
+ion-icon {
+  font-size: 32px;
+}
+
 .head {
   text-align: center;
 }

@@ -11,13 +11,19 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { SyncroPage } from '../pages/syncro/syncro';
 import { ProductPage } from '../pages/product/product';
+import { SupplierPage } from '../pages/supplier/supplier'
+import { ProfilPage } from '../pages/profil/profil'
+import { OrdersPage } from '../pages/orders/orders'
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     SyncroPage,
-    ProductPage
+    ProductPage,
+    SupplierPage,
+    ProfilPage,
+    OrdersPage
   ],
   imports: [
     BrowserModule,
@@ -30,7 +36,10 @@ import { ProductPage } from '../pages/product/product';
     MyApp,
     HomePage,
     SyncroPage,
-    ProductPage
+    ProductPage,
+    SupplierPage,
+    ProfilPage,
+    OrdersPage
   ],
   providers: [
     StatusBar,

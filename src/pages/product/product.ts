@@ -3,6 +3,7 @@ import { NavController, NavParams, ToastController } from 'ionic-angular';
 import { Product } from '../../models/product';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { DataProvider } from '../../providers/data/data';
+import { SupplierPage } from '../supplier/supplier'
 
 @Component({
   selector: 'page-product',
@@ -26,7 +27,7 @@ export class ProductPage {
     this.product.price = this.productForm.controls.price.value
     this.product.unit = this.productForm.controls.unit.value
     this.product.stock = this.productForm.controls.stock.value
-    this.product.edited = true;
+    this.product.edited = true
     this.dataProvider.setProducts()
     this.dataProvider.setEditInProgress(true)
     this.initForm()
@@ -54,5 +55,10 @@ export class ProductPage {
     });
 
     toast.present()
+  }
+
+  // Open page supplier
+  openSupplier(supplier) {
+    this.navCtrl.push(SupplierPage, {'supplier': supplier, 'product': this.product})
   }
 }
